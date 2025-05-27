@@ -1,7 +1,21 @@
-import React from 'react'
+import type { Product } from "../../app/models/product";
 
-export default function Catalog() {
+type Props = {
+  products: Product[];
+  addProduct: () => void;
+}
+
+export default function Catalog({products, addProduct}: Props) {
   return (
-    <div>Catalog</div>
+    <>
+       <ul>
+        {products.map(item  => (
+          <li key={item.id}>
+            {item.name} - {item.price}
+          </li>
+        ))}        
+      </ul>
+      <button onClick={addProduct} >Add Product</button>
+    </>
   )
 }
