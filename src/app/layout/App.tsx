@@ -31,8 +31,6 @@ function App() {
     <div>
       <h1 style={{ color: "red" }}>Ski Store</h1>
       <Catalog products={products} addProduct={addProduct} />
-     
-      
     </div>
   );
 }
