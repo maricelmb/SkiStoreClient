@@ -1,4 +1,3 @@
-
 import type { Product } from "../../app/models/product";
 import ProductList from "./ProductList";
 
