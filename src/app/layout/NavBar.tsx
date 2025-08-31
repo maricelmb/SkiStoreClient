@@ -42,7 +42,17 @@ export default function NavBar({ darkMode, toggleDarkMode }: Props) {
               component={NavLink}
               to={path}
               key={path}
-              sx={{ color: "inherit", typography: "h6" }}
+              sx={{
+                color: "inherit",
+                typography: "h6",
+                textDecoration: "none",
+                "&:hover": {
+                  color: "grey.500",
+                },
+                "&.active": {
+                  color: "#baecf9",
+                },
+              }}
             >
               {title.toUpperCase()}
             </ListItem>
