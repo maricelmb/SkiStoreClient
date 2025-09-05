@@ -8,9 +8,17 @@ import "./app/layout/styles.css";
 
 import { RouterProvider } from "react-router";
 import { router } from "./app/routes/Routes.tsx";
+import { Provider } from "react-redux";
+import { configureTheStore } from "./app/store/configureStore.ts";
+
+const store = configureTheStore();
+
+console.log(store.getState());
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </StrictMode>
 );
