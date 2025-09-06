@@ -9,11 +9,7 @@ import "./app/layout/styles.css";
 import { RouterProvider } from "react-router";
 import { router } from "./app/routes/Routes.tsx";
 import { Provider } from "react-redux";
-import { configureTheStore } from "./app/store/configureStore.ts";
-
-const store = configureTheStore();
-
-console.log(store.getState());
+import { store } from "./app/store/configureStore.ts";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
