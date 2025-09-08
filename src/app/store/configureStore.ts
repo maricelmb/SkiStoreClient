@@ -4,6 +4,7 @@ import counterReducer, {
 } from "../../features/contact/counterReducer";
 
 import { useDispatch, useSelector } from "react-redux";
+import { catalogApi } from "../../features/catalog/catalogapi";
 
 //not using the toolkit
 export function configureTheStore() {
@@ -12,8 +13,11 @@ export function configureTheStore() {
 
 export const store = configureStore({
   reducer: {
+    [catalogApi.reducerPath]: catalogApi.reducer,
     counter: counterSlice.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(catalogApi.middleware),
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
