@@ -1,5 +1,5 @@
 import ProductList from "./ProductList";
-import { useFetchProductsQuery } from "./catalogapi";
+import { useFetchProductsQuery } from "./catalogApi";
 
 export default function Catalog() {
   /*const [products, setProducts] = useState<Product[]>([]);

@@ -4,7 +4,7 @@ import counterReducer, {
 } from "../../features/contact/counterReducer";
 
 import { useDispatch, useSelector } from "react-redux";
-import { catalogApi } from "../../features/catalog/catalogapi";
+import { catalogApi } from "../../features/catalog/catalogApi";
 import { uiSlice } from "../layout/uiSlice";
 
 //not using the toolkit
