@@ -8,5 +8,5 @@ export default function BasketPage() {
 
   if (!data) return <Typography variant="h3">Your basket is empty</Typography>;
 
-  return <div>BasketPage</div>;
+  return <div>BasketPage ({data.basketId})</div>;
 }
